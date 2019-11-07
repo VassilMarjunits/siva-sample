@@ -1,0 +1,14 @@
+version: '3'
+services:
+  siva-sample-app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: siva-sample-app
+    ports:
+      - 9000:9000
+    networks:
+      - network1
+ 
+networks:
+  network1:
