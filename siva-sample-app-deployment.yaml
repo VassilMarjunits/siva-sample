@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: siva-sample-app-deployment
+  labels:
+    app: siva-sample-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: siva-sample-app
+  template:
+    metadata:
+      labels:
+        app: siva-sample-app
+    spec:
+      containers:
+      - name: siva-sample-app
+        image: vassilmarju/siva-sample-app:v1
+        ports:
+        - containerPort: 9000
