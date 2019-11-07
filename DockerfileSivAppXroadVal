@@ -1,0 +1,7 @@
+FROM openjdk:8
+COPY ./siva-parent/siva-webapp/target/siva-webapp-3.2.2-exec.jar /opt/
+#COPY ./validation-services-parent/xroad-validation-service/target/xroad-validation-service-3.2.2-exec.jar /opt/
+WORKDIR /opt
+EXPOSE 8080:8080
+CMD ["./siva-webapp-3.2.2-exec.jar"]
+#CMD ["./xroad-validation-service-3.2.2-exec.jar"]

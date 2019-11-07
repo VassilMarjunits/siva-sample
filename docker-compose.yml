@@ -9,6 +9,15 @@ services:
       - 9000:9000
     networks:
       - network1
- 
+  siva-webapp:
+    build:
+      context: ./
+      dockerfile: DockerfileSivAppXroadVal
+    image: siva-webapp
+    ports:
+      - 8080:8080
+    networks:
+      - network1
+
 networks:
   network1:
